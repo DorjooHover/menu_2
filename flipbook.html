@@ -9,31 +9,23 @@
           />
           <title>Menu</title>
           <link rel="stylesheet" href="./css/style.css" />
+     </head>
+     <body>
+          <div id="flipbook">
+               <div><img src="./img/page.jpg" alt="" /></div>
+               <div><img src="./img/img_2_1.jpg" alt="" /></div>
+               <div><img src="./img/img_2_2.jpg" alt="" /></div>
+               <div><img src="./img/img_2_3.jpg" alt="" /></div>
+               <div><img src="./img/img_2_4.jpg" alt="" /></div>
+          </div>
           <script
                type="text/javascript"
                src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
           ></script>
           <script type="text/javascript" src="turn.min.js"></script>
-     </head>
-     <body>
-          <div id="flipbook">
-               <div><img src="./img/page.jpg" alt="" /></div>
-               <div><img src="./img/2.jpg" alt="" /></div>
-               <div><img src="./img/2 (1).jpg" alt="" /></div>
-               <div><img src="./img/3.jpg" alt="" /></div>
-               <div><img src="./img/3 (1).jpg" alt="" /></div>
-               <div><img src="./img/4.jpg" alt="" /></div>
-               <div><img src="./img/4 (1).jpg" alt="" /></div>
-               <div><img src="./img/5.jpg" alt="" /></div>
-               <div><img src="./img/5 (1).jpg" alt="" /></div>
-               <div><img src="./img/6.jpg" alt="" /></div>
-               <div><img src="./img/6 (1).jpg" alt="" /></div>
-               <div><img src="./img/7.jpg" alt="" /></div>
-               <div><img src="./img/7 (1).jpg" alt="" /></div>
-          </div>
           <script type="text/javascript">
                $("#flipbook").turn({
-                    width: window.innerWidth,
+                    width: (window.innerWidth / 100) * 90,
                     height: innerHeight,
                     page: 1,
                     autoCenter: true,
