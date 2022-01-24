@@ -77,7 +77,7 @@
                     height: innerHeight,
                     page: 1,
                     autoCenter: true,
-                    duration: 1500,
+                    duration: 1000,
                });
                $(".book_1").click(function () {
                     $("#flipbook").turn("next");
@@ -85,6 +85,18 @@
                $(".book_2").click(function () {
                     $("#flipbook").turn("previous");
                });
+               if (
+                    document.documentElement.clientHeight < 950 &&
+                    document.documentElement.clientWidth < 480
+               ) {
+                    screen.orientation.lock("landscape");
+                    $("#flipbook").turn({
+                         width: (innerHeight / 670) * 970,
+                         height: innerHeight,
+                         page: 1,
+                         duration: 1000,
+                    });
+               }
           </script>
      </body>
 </html>
